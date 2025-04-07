@@ -1,0 +1,30 @@
+@import './fonts.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: "Roboto", sans-serif;
+  --font-display: "Ortland Display", Impact, sans-serif;
+}
+
+html {
+  @apply scroll-smooth;
+}
+
+body {
+  @apply bg-dark-900 text-light-100 antialiased overflow-x-hidden;
+}
+
+.marquee-container {
+  @apply w-full overflow-hidden;
+}
+
+.marquee {
+  @apply flex whitespace-nowrap animate-marquee;
+}
+
+.marquee-item {
+  @apply mx-4 inline-block;
+}

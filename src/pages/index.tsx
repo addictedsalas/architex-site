@@ -4,6 +4,12 @@ import { useEffect } from "react";
 
 import Navbar from "@/components/layout/Navbar";
 import Hero from "@/components/home/Hero";
+import Clients from "@/components/home/Clients";
+import OurWork from "@/components/home/OurWork";
+import Services from "@/components/home/Services";
+import Pricing from "@/components/home/Pricing";
+import FAQ from "@/components/home/FAQ";
+import Contact from "@/components/home/Contact";
 import Footer from "@/components/layout/Footer";
 import MarqueeBanner from "@/components/layout/MarqueeBanner";
 
@@ -27,9 +33,14 @@ const Home = () => {
           <Navbar />
           <main className="flex-grow relative z-10">
             <Hero />
+            <Clients />
+            <OurWork />
+            <Services />
+            <Pricing />
+            <FAQ />
+            <Contact />
             {/* Other sections will be added here */}
           </main>
-          <Footer />
         </div>
       </div>
     </>

@@ -4,17 +4,6 @@ const Footer = () => {
   return (
     <footer className="bg-dark-800 text-light-100 py-16 border-t border-dark-600">
       <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h3 className="text-2xl font-bold uppercase mb-4">Trusted by top teams & orgs in the world</h3>
-          <div className="flex flex-wrap justify-center gap-12 opacity-70">
-            {/* Replace with actual client logos */}
-            <div className="w-24 h-12 bg-dark-700 rounded flex items-center justify-center">Logo 1</div>
-            <div className="w-24 h-12 bg-dark-700 rounded flex items-center justify-center">Logo 2</div>
-            <div className="w-24 h-12 bg-dark-700 rounded flex items-center justify-center">Logo 3</div>
-            <div className="w-24 h-12 bg-dark-700 rounded flex items-center justify-center">Logo 4</div>
-          </div>
-        </div>
-        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div className="space-y-4">
             <h3 className="text-xl font-bold uppercase">ARCHITEX</h3>
@@ -39,7 +28,7 @@ const Footer = () => {
               </a>
             </div>
           </div>
-          
+
           <div>
             <h4 className="text-lg font-semibold mb-6 uppercase">Services</h4>
             <ul className="space-y-4">
@@ -65,7 +54,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          
+
           <div>
             <h4 className="text-lg font-semibold mb-6 uppercase">Quick Links</h4>
             <ul className="space-y-4">
@@ -86,7 +75,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          
+
           <div>
             <h4 className="text-lg font-semibold mb-6 uppercase">Contact Us</h4>
             <ul className="space-y-4">
@@ -105,7 +94,7 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        
+
         <div className="pt-8 border-t border-dark-600 flex flex-col md:flex-row justify-between items-center">
           <p className="text-light-400 mb-4 md:mb-0">
             © {new Date().getFullYear()} Architex Creative. All rights reserved.

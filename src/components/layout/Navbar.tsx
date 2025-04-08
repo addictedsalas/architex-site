@@ -6,7 +6,7 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-8 left-0 right-0 z-50 bg-transparent py-4">
+    <nav className="top-8 left-0 right-0 z-50 bg-transparent py-4">
       <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
@@ -15,7 +15,7 @@ const Navbar = () => {
               <span className="text-xl font-black text-white tracking-tight font-display">ARCHITEX CREATIVE AGENCY</span>
             </Link>
           </div>
-          
+
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-10">
             <Link href="/work" className="text-white hover:text-yellow-300 transition-colors uppercase font-bold text-sm tracking-widest font-sans">
@@ -30,7 +30,7 @@ const Navbar = () => {
             <Link href="/contact" className="text-white hover:text-yellow-300 transition-colors uppercase font-bold text-sm tracking-widest font-sans">
               CONTACT
             </Link>
-            <Link 
+            <Link
               href="/contact"
               className="ml-4 px-5 py-2 border-2 border-white text-white hover:bg-yellow-300 hover:text-black hover:border-yellow-300 transition-all duration-300 uppercase font-black text-sm tracking-widest font-display"
             >

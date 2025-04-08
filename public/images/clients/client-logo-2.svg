@@ -1,0 +1,5 @@
+<svg width="150" height="100" viewBox="0 0 150 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M40 35H110V65H40V35Z" stroke="white" stroke-width="2"/>
+  <path d="M75 40C67.268 40 61 46.268 61 54C61 61.732 67.268 68 75 68C82.732 68 89 61.732 89 54C89 46.268 82.732 40 75 40Z" stroke="white" stroke-width="2"/>
+  <text x="75" y="58" font-family="Arial" font-size="12" fill="white" text-anchor="middle">OKTO</text>
+</svg>

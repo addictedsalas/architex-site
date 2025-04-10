@@ -4,7 +4,7 @@ import { useEffect } from "react";
 
 import Navbar from "@/components/layout/Navbar";
 import Hero from "@/components/home/Hero";
-import Clients from "@/components/home/Clients";
+import Technologies from "@/components/home/Technologies";
 import OurWork from "@/components/home/OurWork";
 import Services from "@/components/home/Services";
 import Pricing from "@/components/home/Pricing";
@@ -35,7 +35,7 @@ const Home = () => {
               <Hero />
             </div>
             <div className="bg-[#272727]">
-              <Clients />
+              <Technologies />
               <OurWork />
               <Services />
               <Pricing />

@@ -54,7 +54,7 @@ const Services = () => {
   };
 
   return (
-    <section className="py-24 relative">
+    <section id="services" className="py-24 relative">
       <div className="max-w-[1920px] mx-auto">
         <div className="flex justify-center mb-16">
           <div className="relative">

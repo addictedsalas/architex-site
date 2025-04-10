@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center pt-16 pb-16 overflow-hidden">
+    <section className="relative min-h-screen flex items-center pt-16 pb-16 overflow-hidden bg-cover bg-center" style={{ backgroundImage: "url('/images/black-gradient-image.jpg')" }}>
       <div className="max-w-[1920px] w-full mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative z-10">
           {/* Main headline */}
@@ -55,8 +55,8 @@ const Hero = () => {
               transition={{ duration: 0.8, delay: 0.6 }}
             >
               <p className="text-gray-300 text-lg md:text-xl font-medium font-sans">
-                No fluff, no jargon, just clean, elegant code and designs that pop.<br />
-                Get your own <span className="text-yellow-300 font-bold font-sans">custom digital solution</span> right now!
+                Bold ideas, smart code, and designs that make an impact.<br />
+                Transform your vision into <span className="text-yellow-300 font-bold font-sans">digital reality</span> today!
               </p>
 
               <div className="mt-8">
@@ -84,7 +84,7 @@ const Hero = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 1.0 }}
               >
-                <div className="text-yellow-300 font-extrabold text-2xl font-display">You think it, we ship it</div>
+                <div className="text-yellow-300 font-extrabold text-2xl font-sans">Dream it, we build it</div>
               </motion.div>
 
               <motion.div

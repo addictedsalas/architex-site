@@ -7,27 +7,27 @@ interface Project {
   id: string;
   title: string;
   description: string;
-  image: string;
+  videoSrc: string;
   tags: string[];
   link: string;
 }
 
 const projects: Project[] = [
   {
-    id: 'skillsetmaster',
-    title: 'SkillSetMaster Course',
-    description: 'AI ISN\'T THE FUTURE, IT\'S HAPPENING NOW!!',
-    image: '/images/projects/skillsetmaster.jpg',
-    tags: ['Vite React', 'Figma', 'Motion'],
-    link: '/work/skillsetmaster'
+    id: 'boring-tees',
+    title: 'Boring Tees',
+    description: 'E-commerce platform for minimalist t-shirt designs',
+    videoSrc: '/videos/BoringTeesSite.mp4',
+    tags: ['Next.js', 'Tailwind CSS', 'Stripe', 'Shopify API'],
+    link: '/projects/boring-tees'
   },
   {
-    id: 'referit',
-    title: 'Refer It',
-    description: 'Unlock Unlimited Earnings with our Reseller Program',
-    image: '/images/projects/referit.jpg',
-    tags: ['Next.js', 'Tailwind', 'API'],
-    link: '/work/referit'
+    id: 'dabalina',
+    title: 'Dabalina',
+    description: 'Handcrafted jewelry e-commerce platform',
+    videoSrc: '/videos/DabalinaWebsite.mp4',
+    tags: ['React', 'Tailwind CSS', 'Framer Motion', 'Shopify'],
+    link: '/projects/dabalina'
   }
 ];
 
@@ -35,7 +35,7 @@ const OurWork = () => {
   const [activeProject, setActiveProject] = useState<string | null>(null);
 
   return (
-    <section className="py-24 relative">
+    <section id="work" className="py-24 relative">
       <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-16">
           <div>
@@ -67,9 +67,12 @@ const OurWork = () => {
               <div className="relative overflow-hidden bg-dark-800 rounded-lg">
                 {/* Project Image */}
                 <div className="aspect-w-16 aspect-h-9 relative">
-                  <img
-                    src={project.image}
-                    alt={project.title}
+                  <video
+                    src={project.videoSrc}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
                     className="w-full h-full object-cover"
                   />
 

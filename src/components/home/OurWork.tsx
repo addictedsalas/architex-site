@@ -28,6 +28,22 @@ const projects: Project[] = [
     videoSrc: '/videos/DabalinaWebsite.mp4',
     tags: ['React', 'Tailwind CSS', 'Framer Motion', 'Shopify'],
     link: '/projects/dabalina'
+  },
+  {
+    id: 'tees-the-moment',
+    title: 'Tees The Moment',
+    description: 'Custom t-shirt design and ordering platform',
+    videoSrc: '/videos/TeesTheMomentSite.mp4',
+    tags: ['React', 'Node.js', 'Express', 'MongoDB'],
+    link: '/projects/tees-the-moment'
+  },
+  {
+    id: 'ionq-data',
+    title: 'IONQ Data Project',
+    description: 'Interactive data visualization dashboard for quantum computing metrics',
+    videoSrc: '/videos/IONQComparisonTool.mp4',
+    tags: ['Vue.js', 'D3.js', 'Python', 'Flask'],
+    link: '/projects/ionq-data'
   }
 ];
 
@@ -56,7 +72,7 @@ const OurWork = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-12">
           {projects.map((project) => (
             <div
               key={project.id}
@@ -64,21 +80,22 @@ const OurWork = () => {
               onMouseEnter={() => setActiveProject(project.id)}
               onMouseLeave={() => setActiveProject(null)}
             >
-              <div className="relative overflow-hidden bg-dark-800 rounded-lg">
+              <div className="relative overflow-hidden bg-dark-800 rounded-lg shadow-xl transition-transform duration-300 hover:scale-[1.02]">
                 {/* Project Image */}
-                <div className="aspect-w-16 aspect-h-9 relative">
+                <div className="relative" style={{ height: '400px' }}>
                   <video
                     src={project.videoSrc}
                     autoPlay
                     loop
                     muted
                     playsInline
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover rounded-lg"
+                    style={{ objectPosition: 'center center' }}
                   />
 
                   {/* Overlay on hover */}
                   <div
-                    className={`absolute inset-0 bg-black/70 flex flex-col justify-between p-8 transition-opacity duration-300 ${activeProject === project.id ? 'opacity-100' : 'opacity-0'
+                    className={`absolute inset-0 bg-black/75 flex flex-col justify-between p-8 transition-all duration-300 ${activeProject === project.id ? 'opacity-100' : 'opacity-0'
                       }`}
                   >
                     <div>
@@ -101,7 +118,7 @@ const OurWork = () => {
 
                       <Link
                         href={project.link}
-                        className="inline-flex items-center justify-center px-4 py-2 bg-yellow-300 text-black font-bold rounded-full text-sm"
+                        className="inline-flex items-center justify-center px-4 py-2 bg-green-400 text-black font-bold rounded-full text-sm"
                       >
                         Explore your next move
                         <ArrowRightIcon className="w-4 h-4 ml-2" />
@@ -112,11 +129,11 @@ const OurWork = () => {
               </div>
 
               {/* Project title below image */}
-              <div className="mt-4 flex justify-between items-center">
-                <h3 className="text-xl font-bold text-white">{project.title}</h3>
+              <div className="mt-5 flex justify-between items-center">
+                <h3 className="text-xl font-bold text-white transition-colors hover:text-green-400">{project.title}</h3>
                 <Link
                   href={project.link}
-                  className="text-white"
+                  className="text-white hover:text-green-400 transition-colors"
                 >
                   <ArrowRightIcon className="w-5 h-5" />
                 </Link>

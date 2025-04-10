@@ -80,8 +80,8 @@ const projects: Record<string, ProjectData> = {
       }
     ],
     nextProject: {
-      id: 'dabalina',
-      title: 'Dabalina'
+      id: 'tees-the-moment',
+      title: 'Tees The Moment'
     }
   },
   'dabalina': {
@@ -125,6 +125,96 @@ const projects: Record<string, ProjectData> = {
       }
     ],
     nextProject: {
+      id: 'ionq-data',
+      title: 'IONQ Data Project'
+    }
+  },
+  'tees-the-moment': {
+    id: 'tees-the-moment',
+    title: 'Tees The Moment',
+    description: 'Custom t-shirt design and ordering platform',
+    fullDescription: 'An innovative platform that allows customers to design, customize, and order their own t-shirts with an intuitive drag-and-drop interface.',
+    clientName: 'Tees The Moment',
+    clientIndustry: 'Custom Apparel & E-commerce',
+    projectDuration: '12 weeks',
+    services: ['UX/UI Design', 'Web Development', 'Custom Tool Integration', 'E-commerce Platform'],
+    technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'Canvas API'],
+    challenge: 'The client wanted to create a platform that would allow customers with no design experience to easily create custom t-shirts. They needed a solution that was both powerful enough for complex designs but simple enough for anyone to use.',
+    solution: 'We developed a custom design tool with intuitive drag-and-drop functionality, pre-made templates, and real-time preview capabilities. The platform includes an advanced color picker, text editor with custom fonts, and the ability to upload personal images. We also implemented a streamlined checkout process and order tracking system.',
+    results: [
+      'Platform launched with over 10,000 sign-ups in the first month',
+      'Average time spent on the design tool: 15 minutes per session',
+      'Customer satisfaction rating of 4.8/5 stars',
+      '65% of customers complete their purchase after starting a design'
+    ],
+    testimonial: {
+      quote: "Architex Creative delivered exactly what we envisioned - a fun, easy-to-use platform that makes custom t-shirt design accessible to everyone. Our customers love the experience, and our business has grown exponentially since launch.",
+      author: "Marcus Johnson",
+      position: "CEO, Tees The Moment"
+    },
+    media: [
+      {
+        type: 'video',
+        url: '/videos/TeesTheMomentSite.mp4',
+        alt: 'Tees The Moment website showcase'
+      },
+      {
+        type: 'image',
+        url: '/images/projects/tees-the-moment-designer.jpg',
+        alt: 'T-shirt designer tool'
+      },
+      {
+        type: 'image',
+        url: '/images/projects/tees-the-moment-mobile.jpg',
+        alt: 'Mobile view of the platform'
+      }
+    ],
+    nextProject: {
+      id: 'dabalina',
+      title: 'Dabalina'
+    }
+  },
+  'ionq-data': {
+    id: 'ionq-data',
+    title: 'IONQ Data Project',
+    description: 'Interactive data visualization dashboard for quantum computing metrics',
+    fullDescription: 'A sophisticated data visualization platform designed for IONQ, a leading quantum computing company, to help them analyze and present complex quantum computing performance metrics.',
+    clientName: 'IONQ Technologies',
+    clientIndustry: 'Quantum Computing & Technology',
+    projectDuration: '16 weeks',
+    services: ['Data Visualization', 'Dashboard Design', 'API Integration', 'Performance Optimization'],
+    technologies: ['Vue.js', 'D3.js', 'Python', 'Flask', 'WebGL'],
+    challenge: 'IONQ needed a way to visualize extremely complex quantum computing metrics in a way that was both technically accurate for researchers and accessible for potential investors and clients. The data sets were massive and required real-time processing and visualization.',
+    solution: 'We created a custom dashboard with interactive 3D visualizations of quantum states and operations. The platform features real-time data processing, comparative analysis tools, and the ability to generate comprehensive reports. We implemented WebGL for handling complex 3D visualizations and optimized the backend for processing large datasets efficiently.',
+    results: [
+      'Reduced data analysis time by 75% for research team',
+      'Increased investor understanding of quantum metrics by 60%',
+      'Platform handles over 10 million data points with sub-second response time',
+      'Used in 12 major investor presentations resulting in $40M in new funding'
+    ],
+    testimonial: {
+      quote: "The data visualization platform developed by Architex Creative has transformed how we communicate our quantum computing advances. Complex concepts that were previously difficult to explain are now immediately understandable through the interactive visualizations.",
+      author: "Dr. Sarah Chen",
+      position: "Chief Research Officer, IONQ Technologies"
+    },
+    media: [
+      {
+        type: 'video',
+        url: '/videos/IONQComparisonTool.mp4',
+        alt: 'IONQ data visualization platform'
+      },
+      {
+        type: 'image',
+        url: '/images/projects/ionq-dashboard.jpg',
+        alt: 'Main dashboard interface'
+      },
+      {
+        type: 'image',
+        url: '/images/projects/ionq-visualization.jpg',
+        alt: '3D quantum state visualization'
+      }
+    ],
+    nextProject: {
       id: 'boring-tees',
       title: 'Boring Tees'
     }
@@ -158,7 +248,7 @@ const ProjectPage = () => {
   if (loading || !project) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-black">
-        <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-yellow-400"></div>
+        <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-green-500"></div>
       </div>
     );
   }
@@ -180,7 +270,7 @@ const ProjectPage = () => {
             <section className="relative py-24">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="mb-8">
-                  <Link href="/#work" className="inline-flex items-center text-yellow-400 hover:text-yellow-300 transition-colors">
+                  <Link href="/#work" className="inline-flex items-center text-green-500 hover:text-green-400 transition-colors">
                     <ArrowLeftIcon className="w-5 h-5 mr-2" />
                     Back to Projects
                   </Link>
@@ -197,19 +287,19 @@ const ProjectPage = () => {
                     
                     <div className="grid grid-cols-2 gap-8 mb-8">
                       <div>
-                        <h3 className="text-yellow-400 font-bold mb-2">Client</h3>
+                        <h3 className="text-green-500 font-bold mb-2">Client</h3>
                         <p className="text-white">{project.clientName}</p>
                       </div>
                       <div>
-                        <h3 className="text-yellow-400 font-bold mb-2">Industry</h3>
+                        <h3 className="text-green-500 font-bold mb-2">Industry</h3>
                         <p className="text-white">{project.clientIndustry}</p>
                       </div>
                       <div>
-                        <h3 className="text-yellow-400 font-bold mb-2">Timeline</h3>
+                        <h3 className="text-green-500 font-bold mb-2">Timeline</h3>
                         <p className="text-white">{project.projectDuration}</p>
                       </div>
                       <div>
-                        <h3 className="text-yellow-400 font-bold mb-2">Services</h3>
+                        <h3 className="text-green-500 font-bold mb-2">Services</h3>
                         <div className="flex flex-wrap gap-2">
                           {project.services.map((service, index) => (
                             <span key={index} className="inline-block px-3 py-1 bg-gray-800 text-white text-xs font-medium rounded-full">
@@ -222,21 +312,23 @@ const ProjectPage = () => {
                   </div>
                   
                   <div className="relative overflow-hidden rounded-lg shadow-xl">
-                    {project.media[0].type === 'video' ? (
-                      <video 
-                        src={project.media[0].url} 
-                        autoPlay 
-                        loop 
-                        muted 
-                        playsInline
-                        className="w-full h-full object-cover"
-                      />
-                    ) : (
-                      <img 
-                        src={project.media[0].url} 
-                        alt={project.media[0].alt || project.title} 
-                        className="w-full h-full object-cover"
-                      />
+                    {project.media && project.media.length > 0 && project.media[0] && project.media[0].url && (
+                      project.media[0].type === 'video' ? (
+                        <video 
+                          src={project.media[0].url} 
+                          autoPlay 
+                          loop 
+                          muted 
+                          playsInline
+                          className="w-full h-full object-cover"
+                        />
+                      ) : (
+                        <img 
+                          src={project.media[0].url} 
+                          alt={(project.media[0].alt || project.title)} 
+                          className="w-full h-full object-cover"
+                        />
+                      )
                     )}
                   </div>
                 </div>
@@ -247,10 +339,12 @@ const ProjectPage = () => {
             <section className="py-20 bg-[#111]">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
-                  <div>
-                    <h2 className="text-3xl font-bold text-white mb-6 font-display">The Challenge</h2>
-                    <p className="text-gray-300">{project.challenge}</p>
-                  </div>
+                  {project.challenge && (
+                    <div className="mb-12">
+                      <h3 className="text-3xl font-bold text-white mb-4 font-display">The Challenge</h3>
+                      <p className="text-gray-300">{project.challenge}</p>
+                    </div>
+                  )}
                   <div>
                     <h2 className="text-3xl font-bold text-white mb-6 font-display">Our Solution</h2>
                     <p className="text-gray-300">{project.solution}</p>
@@ -266,7 +360,7 @@ const ProjectPage = () => {
                 <div className="flex flex-wrap justify-center gap-6">
                   {project.technologies.map((tech, index) => (
                     <div key={index} className="px-6 py-4 bg-[#1E1E1E] rounded-lg">
-                      <span className="text-yellow-400 font-bold">{tech}</span>
+                      <span className="text-green-500 font-bold">{tech}</span>
                     </div>
                   ))}
                 </div>
@@ -281,7 +375,7 @@ const ProjectPage = () => {
                   {project.results.map((result, index) => (
                     <div key={index} className="p-6 bg-[#1E1E1E] rounded-lg">
                       <div className="flex items-start">
-                        <div className="bg-yellow-400 p-2 rounded-full mr-4">
+                        <div className="bg-green-500 p-2 rounded-full mr-4">
                           <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                           </svg>
@@ -326,12 +420,12 @@ const ProjectPage = () => {
             {project.testimonial && (
               <section className="py-20 bg-[#111]">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                  <svg className="w-12 h-12 text-yellow-400 mx-auto mb-6" fill="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-12 h-12 text-green-500 mx-auto mb-6" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                   </svg>
                   <p className="text-2xl text-white italic mb-8">{project.testimonial.quote}</p>
                   <div>
-                    <p className="text-yellow-400 font-bold">{project.testimonial.author}</p>
+                    <p className="text-green-500 font-bold">{project.testimonial.author}</p>
                     <p className="text-gray-400">{project.testimonial.position}</p>
                   </div>
                 </div>
@@ -339,14 +433,14 @@ const ProjectPage = () => {
             )}
             
             {/* Next Project Section */}
-            {project.nextProject && (
-              <section className="py-20 bg-black">
+            {project.nextProject && project.nextProject.id && project.nextProject.title && (
+              <section className="py-20 bg-[#0A0A0A]">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                  <p className="text-gray-400 mb-4">Next Project</p>
+                  <p className="text-gray-400 uppercase tracking-wider mb-2">Next Project</p>
                   <h2 className="text-5xl font-bold text-white mb-8 font-display">{project.nextProject.title}</h2>
                   <Link 
                     href={`/projects/${project.nextProject.id}`}
-                    className="inline-flex items-center justify-center px-8 py-3 border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black transition-all duration-300 uppercase font-black tracking-wider text-base font-display"
+                    className="inline-flex items-center justify-center px-8 py-3 border-2 border-green-500 text-green-500 hover:bg-green-500 hover:text-black transition-all duration-300 uppercase font-black tracking-wider text-base font-display"
                   >
                     View Project
                   </Link>

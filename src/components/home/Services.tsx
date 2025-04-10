@@ -14,31 +14,31 @@ const services: Service[] = [
     id: 1,
     title: 'FULLSTACK DEV',
     description: 'From enterprise-scale applications to innovative MVPs, we architect and develop fully functional solutions that transform your vision into reality.',
-    color: 'bg-yellow-200'
+    color: 'bg-green-300'
   },
   {
     id: 2,
     title: 'UI/UX',
     description: 'Create intuitive, engaging, and accessible user experiences that delight your customers and keep them coming back for more.',
-    color: 'bg-yellow-300'
+    color: 'bg-green-400'
   },
   {
     id: 3,
     title: 'WEB3',
     description: 'Harness the power of blockchain technology with our cutting-edge Web3 development services for decentralized applications and smart contracts.',
-    color: 'bg-yellow-400'
+    color: 'bg-green-500'
   },
   {
     id: 4,
     title: 'AI & AUTOMATION',
     description: 'Leverage artificial intelligence and automation to streamline your workflows, gain insights from your data, and create intelligent applications.',
-    color: 'bg-yellow-500'
+    color: 'bg-green-600'
   },
   {
     id: 5,
     title: 'BRAND BUILDING',
     description: 'Establish a strong, cohesive brand identity that resonates with your audience and sets you apart from the competition.',
-    color: 'bg-yellow-600'
+    color: 'bg-green-700'
   }
 ];
 
@@ -59,7 +59,7 @@ const Services = () => {
         <div className="flex justify-center mb-16">
           <div className="relative">
             <h2 className="text-6xl md:text-7xl lg:text-8xl font-extrabold text-white tracking-tighter leading-none font-display">
-              <span className="text-yellow-400">{'{'}</span> OUR SERVICES <span className="text-yellow-400">{'}'}</span>
+              <span className="text-green-500">{'{'}</span> OUR SERVICES <span className="text-green-500">{'}'}</span>
             </h2>
           </div>
         </div>

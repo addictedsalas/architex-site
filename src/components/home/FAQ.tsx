@@ -12,8 +12,8 @@ const faqItems: FAQItem[] = [
     title: 'WHY US',
     content: (
       <>
-        <p>Our work speaks for itself. We&apos;re a team of product builders and design fanatics who bring your digital dreams to life—minus the <span className="text-yellow-400 font-semibold">coding nightmares</span>.</p>
-        <p className="mt-3">We <span className="text-yellow-400 font-semibold">analyze, research, and select the best tech and design</span> for your product, refining it through every iteration.</p>
+        <p>Our work speaks for itself. We&apos;re a team of product builders and design fanatics who bring your digital dreams to life—minus the <span className="text-green-500 font-semibold">coding nightmares</span>.</p>
+        <p className="mt-3">We <span className="text-green-500 font-semibold">analyze, research, and select the best tech and design</span> for your product, refining it through every iteration.</p>
       </>
     ),
     size: 'large'
@@ -23,7 +23,7 @@ const faqItems: FAQItem[] = [
     title: 'WHO IS THE TEAM',
     content: (
       <>
-        <p><span className="text-yellow-400 font-semibold">Top Talent</span> with 5+ years of experience in building products</p>
+        <p><span className="text-green-500 font-semibold">Top Talent</span> with 5+ years of experience in building products</p>
       </>
     ),
     size: 'medium'
@@ -81,7 +81,7 @@ const FAQ = () => {
             <h2 className="text-6xl md:text-7xl lg:text-8xl font-extrabold text-white tracking-tighter leading-none font-display">
               FAQS
             </h2>
-            <svg className="absolute -top-6 right-0 w-12 h-12 text-yellow-400" viewBox="0 0 24 24" fill="currentColor">
+            <svg className="absolute -top-6 right-0 w-12 h-12 text-green-500" viewBox="0 0 24 24" fill="currentColor">
               <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
             </svg>
           </div>
@@ -92,8 +92,8 @@ const FAQ = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-6 gap-6">
           {/* WHY US - Large (spans 3 columns) */}
-          <div className="md:col-span-3 bg-dark-900 rounded-lg p-8 hover:bg-dark-800 transition-colors duration-300 border border-dark-700 hover:border-yellow-400">
-            <h3 className="text-5xl md:text-6xl font-black text-yellow-400 mb-6 font-display">
+          <div className="md:col-span-3 bg-dark-900 rounded-lg p-8 hover:bg-dark-800 transition-colors duration-300 border border-dark-700 hover:border-green-500">
+            <h3 className="text-5xl md:text-6xl font-black text-green-500 mb-6 font-display">
               {faqItems[0]?.title}
             </h3>
             <div className="text-gray-300">
@@ -102,8 +102,8 @@ const FAQ = () => {
           </div>
 
           {/* WHO IS THE TEAM - Medium (spans 3 columns) */}
-          <div className="md:col-span-3 bg-dark-900 rounded-lg p-8 hover:bg-dark-800 transition-colors duration-300 border border-dark-700 hover:border-yellow-400">
-            <h3 className="text-5xl md:text-6xl font-black text-yellow-400 mb-6 font-display">
+          <div className="md:col-span-3 bg-dark-900 rounded-lg p-8 hover:bg-dark-800 transition-colors duration-300 border border-dark-700 hover:border-green-500">
+            <h3 className="text-5xl md:text-6xl font-black text-green-500 mb-6 font-display">
               {faqItems[1]?.title}
             </h3>
             <div className="text-gray-300">
@@ -112,8 +112,8 @@ const FAQ = () => {
           </div>
 
           {/* WILL YOU GHOST US? - Medium (spans 3 columns) */}
-          <div className="md:col-span-3 bg-dark-900 rounded-lg p-8 hover:bg-dark-800 transition-colors duration-300 border border-dark-700 hover:border-yellow-400">
-            <h3 className="text-5xl md:text-6xl font-black text-yellow-400 mb-6 font-display">
+          <div className="md:col-span-3 bg-dark-900 rounded-lg p-8 hover:bg-dark-800 transition-colors duration-300 border border-dark-700 hover:border-green-500">
+            <h3 className="text-5xl md:text-6xl font-black text-green-500 mb-6 font-display">
               {faqItems[2]?.title}
             </h3>
             <div className="text-gray-300">
@@ -122,8 +122,8 @@ const FAQ = () => {
           </div>
 
           {/* PRICING - Medium (spans 3 columns) */}
-          <div className="md:col-span-3 bg-dark-900 rounded-lg p-8 hover:bg-dark-800 transition-colors duration-300 border border-dark-700 hover:border-yellow-400">
-            <h3 className="text-5xl md:text-6xl font-black text-yellow-400 mb-6 font-display">
+          <div className="md:col-span-3 bg-dark-900 rounded-lg p-8 hover:bg-dark-800 transition-colors duration-300 border border-dark-700 hover:border-green-500">
+            <h3 className="text-5xl md:text-6xl font-black text-green-500 mb-6 font-display">
               {faqItems[3]?.title}
             </h3>
             <div className="text-gray-300">
@@ -132,8 +132,8 @@ const FAQ = () => {
           </div>
 
           {/* WE ARE HIRING! - Small (spans 2 columns) */}
-          <div className="md:col-span-6 bg-dark-900 rounded-lg p-8 hover:bg-dark-800 transition-colors duration-300 border border-dark-700 hover:border-yellow-400">
-            <h3 className="text-5xl md:text-6xl font-black text-yellow-400 mb-6 font-display">
+          <div className="md:col-span-6 bg-dark-900 rounded-lg p-8 hover:bg-dark-800 transition-colors duration-300 border border-dark-700 hover:border-green-500">
+            <h3 className="text-5xl md:text-6xl font-black text-green-500 mb-6 font-display">
               {faqItems[4]?.title}
             </h3>
             <div className="text-gray-300">

@@ -2,7 +2,7 @@ const MarqueeBanner = () => {
   const items = ['CREATE', '•', 'INNOVATE', '•', 'AUTOMATE', '•', 'ELEVATE', '•'];
   
   return (
-    <div className="w-full bg-accent text-black font-sans text-sm md:text-base flex items-center justify-center select-none h-8 overflow-hidden z-10 relative">
+    <div className="w-full bg-green-500 text-black font-sans text-sm md:text-base flex items-center justify-center select-none h-8 overflow-hidden z-10 relative">
       <div className="marquee-container">
         <div className="marquee">
           {/* Repeat items many times to ensure the marquee is filled */}

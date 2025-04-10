@@ -18,18 +18,18 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-10">
-            <Link href="#work" className="text-white hover:text-yellow-300 transition-colors uppercase font-bold text-sm tracking-widest font-sans">
+            <Link href="#work" className="text-white hover:text-green-400 transition-colors uppercase font-bold text-sm tracking-widest font-sans">
               OUR WORK
             </Link>
-            <Link href="#services" className="text-white hover:text-yellow-300 transition-colors uppercase font-bold text-sm tracking-widest font-sans">
+            <Link href="#services" className="text-white hover:text-green-400 transition-colors uppercase font-bold text-sm tracking-widest font-sans">
               SERVICES
             </Link>
-            <Link href="#faq" className="text-white hover:text-yellow-300 transition-colors uppercase font-bold text-sm tracking-widest font-sans">
+            <Link href="#faq" className="text-white hover:text-green-400 transition-colors uppercase font-bold text-sm tracking-widest font-sans">
               FAQ
             </Link>
             <Link
               href="#contact"
-              className="ml-4 px-5 py-2 border-2 border-white text-white hover:bg-yellow-300 hover:text-black hover:border-yellow-300 transition-all duration-300 uppercase font-black text-sm tracking-widest font-display"
+              className="ml-4 px-5 py-2 border-2 border-white text-white hover:bg-green-400 hover:text-black hover:border-green-400 transition-all duration-300 uppercase font-black text-sm tracking-widest font-display"
             >
               CONTACT US →
             </Link>
@@ -39,7 +39,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="inline-flex items-center justify-center p-2 text-white hover:text-yellow-400 focus:outline-none transition-colors"
+              className="inline-flex items-center justify-center p-2 text-white hover:text-green-500 focus:outline-none transition-colors"
             >
               <span className="sr-only">Open main menu</span>
               {!isMenuOpen ? (
@@ -61,35 +61,35 @@ const Navbar = () => {
         <div className="px-4 pt-4 pb-6 space-y-4 bg-transparent backdrop-blur-sm border-t border-gray-800/30 shadow-lg">
           <Link
             href="#work"
-            className="block py-2 text-white hover:text-yellow-300 transition-colors uppercase font-semibold text-sm tracking-wider font-sans"
+            className="block py-2 text-white hover:text-green-400 transition-colors uppercase font-semibold text-sm tracking-wider font-sans"
             onClick={() => setIsMenuOpen(false)}
           >
             OUR WORK
           </Link>
           <Link
             href="#services"
-            className="block py-2 text-white hover:text-yellow-300 transition-colors uppercase font-semibold text-sm tracking-wider font-sans"
+            className="block py-2 text-white hover:text-green-400 transition-colors uppercase font-semibold text-sm tracking-wider font-sans"
             onClick={() => setIsMenuOpen(false)}
           >
             SERVICES
           </Link>
           <Link
             href="#faq"
-            className="block py-2 text-white hover:text-yellow-300 transition-colors uppercase font-semibold text-sm tracking-wider font-sans"
+            className="block py-2 text-white hover:text-green-400 transition-colors uppercase font-semibold text-sm tracking-wider font-sans"
             onClick={() => setIsMenuOpen(false)}
           >
             FAQ
           </Link>
           <Link
             href="#contact"
-            className="block py-2 text-white hover:text-yellow-300 transition-colors uppercase font-semibold text-sm tracking-wider font-sans"
+            className="block py-2 text-white hover:text-green-400 transition-colors uppercase font-semibold text-sm tracking-wider font-sans"
             onClick={() => setIsMenuOpen(false)}
           >
             CONTACT
           </Link>
           <Link
             href="#contact"
-            className="inline-block mt-4 px-5 py-2 border-2 border-white text-white hover:bg-yellow-300 hover:text-black hover:border-yellow-300 transition-all duration-300 uppercase font-black text-sm tracking-widest font-display"
+            className="inline-block mt-4 px-5 py-2 border-2 border-white text-white hover:bg-green-400 hover:text-black hover:border-green-400 transition-all duration-300 uppercase font-black text-sm tracking-widest font-display"
             onClick={() => setIsMenuOpen(false)}
           >
             CONTACT US →

@@ -38,7 +38,7 @@ const Hero = () => {
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
                 <motion.h1
-                  className="text-6xl md:text-8xl lg:text-9xl font-black text-black tracking-tighter leading-none bg-yellow-300 py-2 px-6 -rotate-6 inline-block transform shadow-lg font-display"
+                  className="text-6xl md:text-8xl lg:text-9xl font-black text-black tracking-tighter leading-none bg-green-400 py-2 px-6 -rotate-6 inline-block transform shadow-lg font-display"
                   initial={{ y: 100, opacity: 0, rotate: 0 }}
                   animate={{ y: 0, opacity: 1, rotate: -6 }}
                   transition={{ duration: 0.8, delay: 0.4 }}
@@ -56,13 +56,13 @@ const Hero = () => {
             >
               <p className="text-gray-300 text-lg md:text-xl font-medium font-sans">
                 Bold ideas, smart code, and designs that make an impact.<br />
-                Transform your vision into <span className="text-yellow-300 font-bold font-sans">digital reality</span> today!
+                Transform your vision into <span className="text-green-400 font-bold font-sans">digital reality</span> today!
               </p>
 
               <div className="mt-8">
                 <a
                   href="#contact"
-                  className="inline-flex items-center justify-center px-8 py-3 border-2 border-white text-white hover:bg-yellow-300 hover:text-black hover:border-yellow-300 transition-all duration-300 uppercase font-black tracking-wider text-base font-display"
+                  className="inline-flex items-center justify-center px-8 py-3 border-2 border-white text-white hover:bg-green-400 hover:text-black hover:border-green-400 transition-all duration-300 uppercase font-black tracking-wider text-base font-display"
                 >
                   BOOK A CALL
                 </a>
@@ -84,7 +84,7 @@ const Hero = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 1.0 }}
               >
-                <div className="text-yellow-300 font-extrabold text-2xl font-sans">Dream it, we build it</div>
+                <div className="text-green-400 font-extrabold text-2xl font-sans">Dream it, we build it</div>
               </motion.div>
 
               <motion.div

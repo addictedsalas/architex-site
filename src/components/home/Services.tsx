@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { ChevronDownIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
+import { openCalendlyPopup } from '@/utils/calendly';
 
 interface Service {
   id: number;
@@ -94,12 +95,12 @@ const Services = () => {
                     <p className="text-lg md:text-xl text-black max-w-3xl mb-6 md:mb-0">
                       {service.description}
                     </p>
-                    <Link
-                      href="/contact"
-                      className="inline-flex items-center justify-center px-6 py-3 bg-black text-white font-bold rounded-full text-sm whitespace-nowrap"
+                    <button
+                      onClick={openCalendlyPopup}
+                      className="inline-flex items-center justify-center px-6 py-3 bg-black text-white font-bold rounded-full text-sm whitespace-nowrap transition-colors hover:bg-gray-800"
                     >
                       BOOK A CALL
-                    </Link>
+                    </button>
                   </div>
                 </div>
               </div>

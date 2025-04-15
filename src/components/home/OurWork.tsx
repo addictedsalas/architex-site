@@ -1,48 +1,54 @@
 import { useState } from 'react';
 // import { motion } from 'framer-motion';
 import Link from 'next/link';
+// Removed Image import as we're using video
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
 interface Project {
-  id: string;
+  id: number;
   title: string;
   description: string;
-  videoSrc: string;
+  videoSrc: string; // Reverted to videoSrc
   tags: string[];
+  liveUrl: string;
   link: string;
 }
 
 const projects: Project[] = [
   {
-    id: 'boring-tees',
+    id: 1,
     title: 'Boring Tees',
-    description: 'E-commerce platform for minimalist t-shirt designs',
-    videoSrc: '/videos/BoringTeesSite.mp4',
-    tags: ['Next.js', 'Tailwind CSS', 'Stripe', 'Shopify API'],
+    description: 'Custom apparel printing (Screen Printing, DTF, Embroidery) for the DMV area, turning client ideas into vibrant designs on tees, jackets, and more.',
+    videoSrc: '/videos/BoringTeesSite.mp4', // Reverted to videoSrc
+    tags: ['T3 Stack', 'Next.js', 'TypeScript', 'tRPC', 'Full-Stack'],
+    liveUrl: 'https://www.boringtees.co',
     link: '/projects/boring-tees'
   },
   {
-    id: 'dabalina',
+    id: 2,
     title: 'Dabalina',
-    description: 'Handcrafted jewelry e-commerce platform',
-    videoSrc: '/videos/DabalinaWebsite.mp4',
-    tags: ['React', 'Tailwind CSS', 'Framer Motion', 'Shopify'],
+    description: 'A clean and efficient e-commerce store built on the Shopify platform, providing a seamless online shopping experience with catalog and cart features.',
+    videoSrc: '/videos/DabalinaWebsite.mp4', // Reverted to videoSrc
+    tags: ['E-commerce', 'Shopify', 'Web Development'],
+    liveUrl: 'https://dabalina.com',
     link: '/projects/dabalina'
   },
   {
-    id: 'tees-the-moment',
+    id: 3,
     title: 'Tees The Moment',
     description: 'Custom t-shirt design and ordering platform',
-    videoSrc: '/videos/TeesTheMomentSite.mp4',
-    tags: ['React', 'Node.js', 'Express', 'MongoDB'],
+    videoSrc: '/videos/TeesTheMomentSite.mp4', // Reverted to videoSrc
+    tags: ['T3 Stack', 'Next.js', 'Tailwind CSS', 'Full-Stack App'],
+    liveUrl: '', // Assuming no live URL for this one yet
     link: '/projects/tees-the-moment'
   },
   {
-    id: 'ionq-data',
+    id: 4,
     title: 'IONQ Data Project',
     description: 'Interactive data visualization dashboard for quantum computing metrics',
-    videoSrc: '/videos/IONQComparisonTool.mp4',
-    tags: ['Vue.js', 'D3.js', 'Python', 'Flask'],
+    videoSrc: '/videos/IONQComparisonTool.mp4', // Reverted to videoSrc
+    tags: ['T3 Stack', 'C#', 'SolidWorks API', 'Swagger API', 'Data Visualization'],
+    liveUrl: '', // Assuming no live URL for this one yet
     link: '/projects/ionq-data'
   }
 ];
@@ -51,7 +57,7 @@ const OurWork = () => {
   const [activeProject, setActiveProject] = useState<string | null>(null);
 
   return (
-    <section id="work" className="py-24 relative">
+    <section id="work" className="py-24 relative bg-black">
       <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-16">
           <div>
@@ -60,7 +66,7 @@ const OurWork = () => {
                 OUR WORK
               </h2>
               <div
-                className="absolute -bottom-4 left-0 h-2 bg-red-500 w-24"
+                className="absolute -bottom-4 left-0 h-2 bg-green-400 w-24"
               // initial={{ width: 0 }}
               // animate={{ width: 80 }}
               // transition={{ duration: 0.8, delay: 0.3 }}
@@ -77,25 +83,27 @@ const OurWork = () => {
             <div
               key={project.id}
               className="relative group"
-              onMouseEnter={() => setActiveProject(project.id)}
+              onMouseEnter={() => setActiveProject(project.id.toString())}
               onMouseLeave={() => setActiveProject(null)}
             >
               <div className="relative overflow-hidden bg-dark-800 rounded-lg shadow-xl transition-transform duration-300 hover:scale-[1.02]">
-                {/* Project Image */}
+                {/* Restored Video and wrapped in Link */}
                 <div className="relative" style={{ height: '400px' }}>
-                  <video
-                    src={project.videoSrc}
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="w-full h-full object-cover rounded-lg"
-                    style={{ objectPosition: 'center center' }}
-                  />
+                  <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" aria-label={`View live site for ${project.title}`}>
+                    <video
+                      src={project.videoSrc}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+                      style={{ objectPosition: 'center center' }}
+                    />
+                  </a>
 
                   {/* Overlay on hover */}
                   <div
-                    className={`absolute inset-0 bg-black/75 flex flex-col justify-between p-8 transition-all duration-300 ${activeProject === project.id ? 'opacity-100' : 'opacity-0'
+                    className={`absolute inset-0 bg-black/75 flex flex-col justify-between p-8 transition-all duration-300 ${activeProject === project.id.toString() ? 'opacity-100' : 'opacity-0'
                       }`}
                   >
                     <div>

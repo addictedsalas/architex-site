@@ -1,4 +1,6 @@
 import { motion } from 'framer-motion';
+import { openCalendlyPopup } from '@/utils/calendly';
+import React from 'react';
 
 const Hero = () => {
   return (
@@ -60,12 +62,12 @@ const Hero = () => {
               </p>
 
               <div className="mt-8">
-                <a
-                  href="#contact"
+                <button
+                  onClick={openCalendlyPopup}
                   className="inline-flex items-center justify-center px-8 py-3 border-2 border-white text-white hover:bg-green-400 hover:text-black hover:border-green-400 transition-all duration-300 uppercase font-black tracking-wider text-base font-display"
                 >
-                  BOOK A CALL
-                </a>
+                  Book Free Consultation
+                </button>
               </div>
             </motion.div>
           </div>

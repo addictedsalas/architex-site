@@ -1,11 +1,10 @@
 import Link from 'next/link';
 import { CheckCircleIcon } from '@heroicons/react/24/solid';
+import React from 'react';
+import { openCalendlyPopup } from '@/utils/calendly';
 
 interface PricingPlan {
   name: string;
-  price: string;
-  originalPrice: string;
-  discount: string;
   description: string;
   popular: boolean;
   features: string[];
@@ -15,42 +14,51 @@ interface PricingPlan {
 
 const pricingPlans: PricingPlan[] = [
   {
-    name: 'Launchpad Plan',
-    price: '$1999',
-    originalPrice: '$2499',
-    discount: '20% OFF',
-    description: 'To Deliver a fast, functional, and impactful MVP to kickstart your product journey',
+    name: 'Foundation Suite',
+    description: 'Kickstart your project with essential development and an AI readiness roadmap.',
     popular: false,
     features: [
-      'Project ready within in 3-4 weeks',
-      'Responsive design',
-      'Pleasant Visual design matching your brand',
-      'Essential Features Only',
-      'Basic SEO optimization',
-      '30 days of support'
+      'Discovery & Strategy Workshop',
+      'MVP Web/App Development (Core Functionality)',
+      'AI Readiness Assessment & Consultation',
+      'Standard UI/UX Design',
+      'Basic Deployment & Setup',
+      'Standard Support'
     ],
-    ctaText: 'Launch Your Site NOW!',
-    ctaLink: '/contact'
+    ctaText: 'Book Free Consultation',
+    ctaLink: '#contact'
   },
   {
-    name: 'Full Process Monthly Plan',
-    price: '$2999',
-    originalPrice: '$4499',
-    discount: '33% OFF',
-    description: 'End-to-end product development with an iterative approach to create a polished, feature-rich product.',
+    name: 'Growth Accelerator',
+    description: 'Develop custom solutions and integrate AI to enhance your business processes.',
     popular: true,
     features: [
-      '1 Developer dedicated to your project',
-      'One-of-a-kind crazy Lander design tailored to your brand',
-      'High-quality, modern visuals',
-      'Continuous Iterations',
-      'Attention to detail in every section',
-      'Advanced SEO optimization',
-      'Priority maintenance and updates',
-      'Content management system'
+      'Everything in Foundation Suite, plus:',
+      'Full Custom Software Development',
+      'AI Model Integration (Pre-built or Custom)',
+      'Business Process Automation',
+      'Advanced UI/UX Design & Prototyping',
+      'Scalable Cloud Architecture',
+      'Enhanced Support & Maintenance'
     ],
-    ctaText: 'Book a call NOW!',
-    ctaLink: '/contact'
+    ctaText: 'Book Free Consultation',
+    ctaLink: '#contact'
+  },
+  {
+    name: 'Scale Partnership',
+    description: 'End-to-end development of complex systems with cutting-edge AI capabilities.',
+    popular: false,
+    features: [
+      'Everything in Growth Accelerator, plus:',
+      'Large-Scale Application Development',
+      'Proprietary AI Model Development & Training',
+      'Advanced Data Analytics & Visualization',
+      'Dedicated Development Team Option',
+      'Enterprise-Grade Security & Compliance',
+      'Priority Support & Strategic Consulting'
+    ],
+    ctaText: 'Book Free Consultation',
+    ctaLink: '#contact'
   }
 ];
 
@@ -67,42 +75,29 @@ const Pricing = () => {
             </span>
           </h2>
           <p className="text-gray-400 text-lg italic">
-            Get The Quality and Speed of Big Agencies at <span className="text-white font-semibold">Best Prices</span>
+            Custom Solutions Tailored to Your Business Needs and Goals
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {pricingPlans.map((plan, index) => (
             <div
               key={index}
-              className={`relative rounded-lg overflow-hidden ${plan.popular ? 'bg-gradient-to-br from-green-600 to-green-700' : 'bg-dark-800 border border-dark-700'
+              className={`relative rounded-lg overflow-hidden flex flex-col ${plan.popular ? 'bg-gradient-to-br from-green-600 to-green-700' : 'bg-dark-800 border border-dark-700'
                 }`}
             >
               {plan.popular && (
-                <div className="absolute top-0 right-0">
+                <div className="absolute top-0 right-0 z-10">
                   <div className="bg-green-700 text-black font-bold py-1 px-4 text-sm">
                     MOST POPULAR
                   </div>
                 </div>
               )}
 
-              <div className="p-8">
+              <div className="p-8 flex flex-col flex-grow">
                 <h3 className={`text-2xl font-bold mb-4 ${plan.popular ? 'text-black' : 'text-white'}`}>
                   {plan.name}
                 </h3>
-
-                <div className="flex items-baseline mb-2">
-                  <span className={`text-5xl font-black ${plan.popular ? 'text-black' : 'text-white'}`}>
-                    {plan.price}
-                  </span>
-                  <span className={`ml-2 line-through text-lg ${plan.popular ? 'text-black/70' : 'text-gray-500'}`}>
-                    {plan.originalPrice}
-                  </span>
-                </div>
-
-                <div className="inline-block bg-black text-green-500 text-xs font-bold px-2 py-1 rounded mb-4">
-                  {plan.discount}
-                </div>
 
                 <p className={`mb-8 ${plan.popular ? 'text-black' : 'text-gray-300'}`}>
                   {plan.description}
@@ -111,9 +106,9 @@ const Pricing = () => {
                 {plan.popular && <hr className="border-black/20 my-6" />}
                 {!plan.popular && <hr className="border-dark-600 my-6" />}
 
-                <div className="mb-8">
+                <div className="mb-8 flex-grow">
                   <h4 className={`text-lg font-bold mb-4 ${plan.popular ? 'text-black' : 'text-white'}`}>
-                    DELIVERABLES INCLUDE :
+                    KEY FEATURES INCLUDE:
                   </h4>
                   <ul className="space-y-3">
                     {plan.features.map((feature, i) => (
@@ -128,18 +123,26 @@ const Pricing = () => {
                   </ul>
                 </div>
 
-                <Link
-                  href={plan.ctaLink}
-                  className={`block text-center py-3 px-6 rounded-full font-bold transition-all ${plan.popular
-                      ? 'bg-black text-white hover:bg-gray-900'
-                      : 'bg-green-500 text-black hover:bg-green-600'
+                {/* Button stays at the bottom - updated styles & onClick */}
+                <button
+                  onClick={openCalendlyPopup}
+                  className={`inline-flex items-center justify-center px-8 py-3 border-2 transition-all duration-300 uppercase font-black tracking-wider text-base font-display mt-auto ${plan.popular
+                      ? 'border-black text-black hover:bg-black hover:text-white'
+                      : 'border-green-500 text-green-500 hover:bg-green-500 hover:text-black'
                     }`}
                 >
                   {plan.ctaText}
-                </Link>
+                </button>
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Added pricing clarification note */}
+        <div className="text-center mt-12">
+          <p className="text-gray-400 text-md max-w-3xl mx-auto">
+            Need something different? All plans are fully customizable. Pricing is determined based on your specific project scope after your <span className="text-white font-semibold">free initial consultation</span>.
+          </p>
         </div>
       </div>
     </section>

@@ -1,11 +1,15 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+  const form = useRef<HTMLFormElement>(null);
+  const [isSending, setIsSending] = useState(false);
+  const [statusMessage, setStatusMessage] = useState('');
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
+    user_name: '',
+    user_email: '',
     phone: '',
     message: ''
   });
@@ -18,18 +22,35 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Here you would typically send the form data to your backend or a service like Formspree
-    console.log('Form submitted:', formData);
-    alert('Thanks for reaching out! We\'ll get back to you soon.');
-    // Reset the form
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      message: ''
-    });
+
+    if (!form.current) return;
+
+    setIsSending(true);
+    setStatusMessage('Sending...');
+
+    const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || 'YOUR_SERVICE_ID';
+    const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || 'YOUR_TEMPLATE_ID';
+    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || 'YOUR_PUBLIC_KEY';
+
+    emailjs.sendForm(serviceID, templateID, form.current, publicKey)
+      .then(
+        (result) => {
+          console.log('EmailJS Success:', result.text);
+          setStatusMessage('Message sent successfully!');
+          setIsSending(false);
+          setFormData({ user_name: '', user_email: '', phone: '', message: '' });
+          form.current?.reset();
+          setTimeout(() => setStatusMessage(''), 5000);
+        },
+        (error) => {
+          console.error('EmailJS Error:', error.text);
+          setStatusMessage('Failed to send message. Please try again.');
+          setIsSending(false);
+          setTimeout(() => setStatusMessage(''), 5000);
+        }
+      );
   };
 
   return (
@@ -62,7 +83,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="text-white font-bold mb-1">Email</h4>
-                  <a href="mailto:info@architexcreative.com" className="text-gray-300 hover:text-green-500 transition-colors">info@architexcreative.com</a>
+                  <a href="mailto:architexcreative@gmail.com" className="text-gray-300 hover:text-green-500 transition-colors">architexcreative@gmail.com</a>
                 </div>
               </div>
               
@@ -74,22 +95,10 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="text-white font-bold mb-1">Phone</h4>
-                  <a href="tel:+15551234567" className="text-gray-300 hover:text-green-500 transition-colors">(555) 123-4567</a>
+                  <a href="tel:+15551234567" className="text-gray-300 hover:text-green-500 transition-colors">(786) 302-9144</a>
                 </div>
               </div>
-              
-              <div className="flex items-start space-x-4">
-                <div className="bg-green-500 p-2 rounded-full">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                </div>
-                <div>
-                  <h4 className="text-white font-bold mb-1">Address</h4>
-                  <p className="text-gray-300">123 Design Avenue<br />Creative District<br />New York, NY 10001</p>
-                </div>
-              </div>
+            
             </div>
             
             <div className="mt-10">
@@ -114,18 +123,19 @@ const Contact = () => {
             </div>
           </div>
           
-          {/* Right column - Contact Form */}
+          {/* Right column - Restore Contact Form */}
           <div className="bg-[#1E1E1E] p-8 rounded-lg">
             <h3 className="text-3xl font-bold text-green-500 mb-6 font-display">SEND US A MESSAGE</h3>
             
-            <form onSubmit={handleSubmit} className="space-y-6">
+            {/* Restore the original form */}
+            <form ref={form} onSubmit={sendEmail} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-white font-bold mb-2">Your Name</label>
+                <label htmlFor="user_name" className="block text-white font-bold mb-2">Your Name</label>
                 <input
                   type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
+                  id="user_name"
+                  name="user_name"
+                  value={formData.user_name}
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 bg-[#333] border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 text-white"
@@ -134,12 +144,12 @@ const Contact = () => {
               </div>
               
               <div>
-                <label htmlFor="email" className="block text-white font-bold mb-2">Email Address</label>
+                <label htmlFor="user_email" className="block text-white font-bold mb-2">Email Address</label>
                 <input
                   type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
+                  id="user_email"
+                  name="user_email"
+                  value={formData.user_email}
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 bg-[#333] border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 text-white"
@@ -176,10 +186,16 @@ const Contact = () => {
               
               <button
                 type="submit"
+                disabled={isSending}
                 className="w-full py-4 bg-green-500 hover:bg-green-400 text-black font-bold rounded-lg transition-colors uppercase tracking-wider"
               >
-                SEND MESSAGE
+                {isSending ? 'SENDING...' : 'SEND MESSAGE'}
               </button>
+              {statusMessage && (
+                <p className={`text-center text-sm ${statusMessage.includes('successfully') ? 'text-green-400' : 'text-red-400'}`}>
+                  {statusMessage}
+                </p>
+              )}
             </form>
           </div>
         </div>

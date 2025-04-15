@@ -7,6 +7,7 @@ import Hero from "@/components/home/Hero";
 import Technologies from "@/components/home/Technologies";
 import OurWork from "@/components/home/OurWork";
 import Services from "@/components/home/Services";
+import CallToAction from "@/components/home/CallToAction";
 import Pricing from "@/components/home/Pricing";
 import FAQ from "@/components/home/FAQ";
 import Contact from "@/components/home/Contact";
@@ -24,6 +25,9 @@ const Home = () => {
         <title>Architex Creative</title>
         <meta name="description" content="Architex Creative - Design, Develop, Deploy" />
         <link rel="icon" href="/favicon.ico" />
+        {/* Add Calendly Assets */}
+        <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+        <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
       </Head>
 
       <div className="min-h-screen text-light-100 flex flex-col">
@@ -38,6 +42,7 @@ const Home = () => {
               <Technologies />
               <OurWork />
               <Services />
+              <CallToAction />
               <Pricing />
               <FAQ />
               <Contact />

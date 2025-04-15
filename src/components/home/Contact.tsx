@@ -1,6 +1,5 @@
-import Link from 'next/link';
-
 import { useState, useRef } from 'react';
+import Link from 'next/link';
 import emailjs from '@emailjs/browser';
 
 const Contact = () => {

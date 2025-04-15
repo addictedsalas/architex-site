@@ -239,7 +239,8 @@ const ProjectPage = () => {
         if (projectData) {
           setProject(projectData);
         } else {
-          router.push('/404'); 
+          // Mark router.push with void to handle the promise
+          void router.push('/404');
         }
         setLoading(false);
       }
@@ -309,7 +310,7 @@ const ProjectPage = () => {
                         </div>
                       </div>
                     </div>
-                    {project.liveUrl && (
+                    {project?.liveUrl && (
                       <div className="mt-8">
                         <a
                           href={project.liveUrl}
@@ -325,7 +326,7 @@ const ProjectPage = () => {
                   </div>
                   
                   <div className="relative overflow-hidden rounded-lg shadow-xl h-96 lg:h-auto"> 
-                    {project.media && project.media.length > 0 && project.media[0]?.url && (
+                    {project?.media?.length > 0 && project?.media[0]?.url && (
                       project.media[0].type === 'video' ? (
                         <video 
                           src={project.media[0].url} 
@@ -338,7 +339,7 @@ const ProjectPage = () => {
                       ) : (
                         <img 
                           src={project.media[0].url} 
-                          alt={(project.media[0].alt || project.title)} 
+                          alt={(project.media[0].alt ?? project.title)} 
                           className="w-full h-full object-cover"
                         />
                       )
@@ -394,16 +395,16 @@ const ProjectPage = () => {
               </div>
             </section>
             
-            {project.testimonial && (
+            {project?.testimonial && (
               <section className="py-20 bg-[#111]">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                   <svg className="w-12 h-12 text-green-500 mx-auto mb-6" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                   </svg>
-                  <p className="text-2xl text-white italic mb-8">{project.testimonial.quote}</p>
+                  <p className="text-2xl text-white italic mb-8">{project?.testimonial?.quote}</p>
                   <div>
-                    <p className="text-green-500 font-bold">{project.testimonial.author}</p>
-                    <p className="text-gray-400">{project.testimonial.position}</p>
+                    <p className="text-green-500 font-bold">{project?.testimonial?.author}</p>
+                    <p className="text-gray-400">{project?.testimonial?.position ?? 'Client'}</p>
                   </div>
                 </div>
               </section>

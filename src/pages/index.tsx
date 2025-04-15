@@ -1,4 +1,3 @@
-import { type NextPage } from "next";
 import Head from "next/head";
 import { useEffect } from "react";
 
@@ -11,7 +10,6 @@ import CallToAction from "@/components/home/CallToAction";
 import Pricing from "@/components/home/Pricing";
 import FAQ from "@/components/home/FAQ";
 import Contact from "@/components/home/Contact";
-import Footer from "@/components/layout/Footer";
 import MarqueeBanner from "@/components/layout/MarqueeBanner";
 
 const Home = () => {

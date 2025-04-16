@@ -3,6 +3,12 @@
   "rules": {
     "@next/next/no-img-element": "off",
     "@next/next/no-page-custom-font": "off",
-    "@typescript-eslint/no-unused-vars": "warn"
+    "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/no-unsafe-member-access": "off",
+    "@typescript-eslint/prefer-nullish-coalescing": "warn",
+    "@typescript-eslint/prefer-optional-chain": "warn",
+    "@typescript-eslint/no-floating-promises": "warn",
+    "react/no-unescaped-entities": "off",
+    "@typescript-eslint/consistent-type-imports": "warn"
   }
 }

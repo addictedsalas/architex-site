@@ -1,24 +1,3 @@
-/* Ortland Display Font */
-@font-face {
-  font-family: 'Ortland Display';
-  src: url('/fonts/Ortland.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Ortland Display';
-  src: url('/fonts/Ortland.otf') format('opentype');
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Ortland Display';
-  src: url('/fonts/Ortland.otf') format('opentype');
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
+/* Google Fonts are now used instead of local fonts */
+/* Bungee for headings and Open Sans for body text */
+/* These fonts are loaded via the FontLoader component */

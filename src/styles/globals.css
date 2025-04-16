@@ -5,8 +5,8 @@
 @tailwind utilities;
 
 :root {
-  --font-sans: "Roboto", sans-serif;
-  --font-display: "Ortland Display", Impact, sans-serif;
+  --font-sans: "Open Sans", sans-serif;
+  --font-display: "Bungee", cursive;
 }
 
 html {

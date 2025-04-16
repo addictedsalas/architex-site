@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { FiMail, FiPhone, FiMapPin } from 'react-icons/fi';
 import { FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa';
+import Image from 'next/image';
 
 const Footer = () => {
   return (
@@ -8,7 +9,13 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div className="md:col-span-1">
-            <h3 className="text-xl font-bold uppercase">BORING PROJECTS</h3>
+            <Image 
+              src="/images/BoringLogo.png" 
+              alt="Boring Projects Logo" 
+              width={280} 
+              height={80} 
+              className="h-auto mb-4" 
+            />
             <p className="text-light-400">
               No fluff, no jargon, just clean, elegant code and designs that pop.
             </p>
@@ -40,20 +47,11 @@ const Footer = () => {
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
                 <div className="bg-green-500 p-2 rounded-full flex-shrink-0">
-                  <FiMapPin className="h-6 w-6 text-black" />
-                </div>
-                <div>
-                  <h4 className="text-white font-bold mb-1">Address</h4>
-                  <p className="text-gray-300">123 Design Street,<br />Creative City, CA 90210</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4">
-                <div className="bg-green-500 p-2 rounded-full flex-shrink-0">
                   <FiMail className="h-6 w-6 text-black" />
                 </div>
                 <div>
                   <h4 className="text-white font-bold mb-1">Email</h4>
-                  <a href="mailto:hello@boringprojects.com" className="text-gray-300 hover:text-green-500 transition-colors">hello@boringprojects.com</a>
+                  <a href="mailto:hello@boringprojects.com" className="text-gray-300 hover:text-green-500 transition-colors">architexcreative@gmail.com</a>
                 </div>
               </div>
               <div className="flex items-start space-x-4">
@@ -62,7 +60,7 @@ const Footer = () => {
                 </div>
                 <div>
                   <h4 className="text-white font-bold mb-1">Phone</h4>
-                  <a href="tel:+1234567890" className="text-gray-300 hover:text-green-500 transition-colors">+1 (234) 567-890</a>
+                  <a href="tel:+1234567890" className="text-gray-300 hover:text-green-500 transition-colors">+1 (786) 302-9144</a>
                 </div>
               </div>
             </div>

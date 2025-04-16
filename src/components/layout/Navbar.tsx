@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 
 const Navbar = () => {
@@ -11,8 +12,13 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
-              {/* Replace with your logo */}
-              <span className="text-xl font-black text-white tracking-tight font-display">BORING PROJECTS</span>
+              <Image 
+                src="/images/BoringLogo.png" 
+                alt="Boring Projects Logo" 
+                width={280} 
+                height={80} 
+                className="h-auto" 
+              />
             </Link>
           </div>
 

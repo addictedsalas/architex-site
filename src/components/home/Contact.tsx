@@ -1,6 +1,9 @@
-import { useState, useRef } from 'react';
 import Link from 'next/link';
+import { useState, useRef } from 'react';
+import { motion } from 'framer-motion';
+import { FiMail, FiPhone, FiMapPin } from 'react-icons/fi';
 import emailjs from '@emailjs/browser';
+import Image from 'next/image';
 
 const Contact = () => {
   const form = useRef<HTMLFormElement>(null);
@@ -204,11 +207,14 @@ const Contact = () => {
         {/* Bottom section with links */}
         <div className="py-10 border-t border-gray-800 flex flex-col md:flex-row items-center justify-between">
           <div className="mb-6 md:mb-0">
-            <Link
-              href="/"
-              className="text-2xl font-black text-white tracking-tight font-display"
-            >
-              BORING PROJECTS
+            <Link href="/" className="flex items-center">
+              <Image 
+                src="/images/BoringLogo.png" 
+                alt="Boring Projects Logo" 
+                width={280} 
+                height={80} 
+                className="h-auto" 
+              />
             </Link>
           </div>
           

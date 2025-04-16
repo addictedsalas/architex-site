@@ -4,19 +4,19 @@ import React from 'react';
 
 const Hero = () => {
   return (
-    <section className="relative h-[100svh] flex items-center justify-center pt-0 pb-0 md:pt-16 md:pb-8 overflow-hidden bg-cover bg-center" style={{ backgroundImage: "url('/images/black-gradient-image.jpg')" }}>
-      <div className="max-w-[1920px] w-full mx-auto px-4 sm:px-6 lg:px-8 -mt-16 md:mt-0">
+    <section className="relative h-[60vh] flex items-center justify-center pt-0 pb-0 md:pt-24 md:pb-24 overflow-hidden bg-cover bg-center" style={{ backgroundImage: "url('/images/black-gradient-image.jpg')" }}>
+      <div className="max-w-[1920px] w-full mx-auto px-4 sm:px-6 lg:px-8 -mt-4 md:mt-0 md:py-8">
         <div className="relative z-10">
           {/* Main headline */}
           <div className="flex flex-col items-start">
             <motion.div
-              className="flex flex-col -space-y-4 md:space-y-0"
+              className="flex flex-col space-y-2 md:space-y-0"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8 }}
             >
               <motion.h1
-                className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-extrabold text-white tracking-tighter leading-none font-display"
+                className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-extrabold text-white tracking-tighter leading-none font-display"
                 initial={{ y: 100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
@@ -25,7 +25,7 @@ const Hero = () => {
               </motion.h1>
 
               <motion.h1
-                className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-extrabold text-white tracking-tighter leading-none font-display"
+                className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-extrabold text-white tracking-tighter leading-none font-display"
                 initial={{ y: 100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
@@ -40,9 +40,9 @@ const Hero = () => {
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
                 <motion.h1
-                  className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-black text-black tracking-tighter leading-none bg-green-400 py-2 px-6 -rotate-6 inline-block transform shadow-lg font-display"
+                  className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black text-black tracking-tighter leading-none bg-green-400 py-2 px-6 -rotate-3 md:-rotate-6 inline-block transform shadow-lg font-display mt-1 md:mt-0"
                   initial={{ y: 100, opacity: 0, rotate: 0 }}
-                  animate={{ y: 0, opacity: 1, rotate: -6 }}
+                  animate={{ y: 0, opacity: 1, rotate: -3 }}
                   transition={{ duration: 0.8, delay: 0.4 }}
                 >
                   DEPLOY
@@ -51,7 +51,7 @@ const Hero = () => {
             </motion.div>
 
             <motion.div
-              className="mt-6 md:mt-8 max-w-2xl"
+              className="mt-3 md:mt-6 max-w-2xl"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
@@ -61,7 +61,7 @@ const Hero = () => {
                 Transform your vision into <span className="text-green-400 font-bold font-sans">digital reality</span> today!
               </p>
 
-              <div className="mt-4 md:mt-8">
+              <div className="mt-2 md:mt-6">
                 <button
                   onClick={openCalendlyPopup}
                   className="inline-flex items-center justify-center px-6 py-2 md:px-8 md:py-3 border-2 border-white text-white hover:bg-green-400 hover:text-black hover:border-green-400 transition-all duration-300 uppercase font-black tracking-wider text-sm md:text-base font-display"

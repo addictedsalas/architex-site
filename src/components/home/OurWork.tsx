@@ -18,7 +18,7 @@ const projects: Project[] = [
   {
     id: 1,
     title: 'Boring Tees',
-    description: 'Custom apparel printing (Screen Printing, DTF, Embroidery) for the DMV area, turning client ideas into vibrant designs on tees, jackets, and more.',
+    description: 'Custom apparel printing for the DMV area.',
     videoSrc: '/videos/BoringTeesSite.mp4', // Reverted to videoSrc
     tags: ['T3 Stack', 'Next.js', 'TypeScript', 'tRPC', 'Full-Stack'],
     liveUrl: 'https://www.boringtees.co',
@@ -27,7 +27,7 @@ const projects: Project[] = [
   {
     id: 2,
     title: 'Dabalina',
-    description: 'A clean and efficient e-commerce store built on the Shopify platform, providing a seamless online shopping experience with catalog and cart features.',
+    description: 'Elegant jewelry e-commerce store with seamless shopping.',
     videoSrc: '/videos/DabalinaWebsite.mp4', // Reverted to videoSrc
     tags: ['E-commerce', 'Shopify', 'Web Development'],
     liveUrl: 'https://dabalina.com',
@@ -36,7 +36,7 @@ const projects: Project[] = [
   {
     id: 3,
     title: 'Tees The Moment',
-    description: 'Custom t-shirt design and ordering platform',
+    description: 'Custom t-shirt design and ordering platform.',
     videoSrc: '/videos/TeesTheMomentSite.mp4', // Reverted to videoSrc
     tags: ['T3 Stack', 'Next.js', 'Tailwind CSS', 'Full-Stack App'],
     liveUrl: '', // Assuming no live URL for this one yet
@@ -45,7 +45,7 @@ const projects: Project[] = [
   {
     id: 4,
     title: 'IONQ Data Project',
-    description: 'Interactive data visualization dashboard for quantum computing metrics',
+    description: 'Quantum computing data visualization dashboard.',
     videoSrc: '/videos/IONQComparisonTool.mp4', // Reverted to videoSrc
     tags: ['T3 Stack', 'C#', 'SolidWorks API', 'Swagger API', 'Data Visualization'],
     liveUrl: '', // Assuming no live URL for this one yet

@@ -47,8 +47,8 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ['Roboto', 'sans-serif'],
-        display: ['var(--font-display)'],
+        sans: ['Open Sans', 'sans-serif'],
+        display: ['Bungee', 'cursive'],
       },
     },
   },

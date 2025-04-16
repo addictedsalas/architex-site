@@ -62,12 +62,12 @@ const Contact = () => {
       <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* "Still have more questions" text */}
         <div className="text-center mb-8">
-          <p className="text-gray-300 text-xl">Still have more questions? Contact us Below</p>
+          <p className="text-gray-300 text-xl">Still have more questions? Contact us below</p>
         </div>
 
         {/* Large CONTACT US text */}
-        <div className="text-center">
-          <h2 className="text-8xl md:text-9xl lg:text-[180px] xl:text-[220px] font-extrabold text-green-500 tracking-tighter leading-none font-display">
+        <div className="text-center px-4 md:px-0">
+          <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold text-green-500 tracking-tighter leading-none font-display">
             CONTACT US
           </h2>
         </div>

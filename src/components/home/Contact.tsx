@@ -45,7 +45,7 @@ const Contact = () => {
         },
         (error) => {
           // Use a type assertion to safely access the error text
-          const errorMessage = typeof error === 'object' && error !== null ? String((error as Record<string, unknown>).text || error) : String(error);
+          const errorMessage = typeof error === 'object' && error !== null ? String((error as Record<string, unknown>).text ?? error) : String(error);
           console.error('EmailJS Error:', errorMessage);
           setStatusMessage('Failed to send message. Please try again.');
           setIsSending(false);

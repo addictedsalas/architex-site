@@ -4,7 +4,7 @@ import React from 'react';
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center pt-16 pb-16 overflow-hidden bg-cover bg-center" style={{ backgroundImage: "url('/images/black-gradient-image.jpg')" }}>
+    <section className="relative h-[100svh] flex items-center pt-12 pb-4 md:pt-16 md:pb-8 overflow-hidden bg-cover bg-center" style={{ backgroundImage: "url('/images/black-gradient-image.jpg')" }}>
       <div className="max-w-[1920px] w-full mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative z-10">
           {/* Main headline */}
@@ -16,7 +16,7 @@ const Hero = () => {
               transition={{ duration: 0.8 }}
             >
               <motion.h1
-                className="text-6xl md:text-8xl lg:text-9xl font-extrabold text-white tracking-tighter leading-none font-display"
+                className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-extrabold text-white tracking-tighter leading-none font-display"
                 initial={{ y: 100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
@@ -25,7 +25,7 @@ const Hero = () => {
               </motion.h1>
 
               <motion.h1
-                className="text-6xl md:text-8xl lg:text-9xl font-extrabold text-white tracking-tighter leading-none font-display"
+                className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-extrabold text-white tracking-tighter leading-none font-display"
                 initial={{ y: 100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
@@ -40,7 +40,7 @@ const Hero = () => {
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
                 <motion.h1
-                  className="text-6xl md:text-8xl lg:text-9xl font-black text-black tracking-tighter leading-none bg-green-400 py-2 px-6 -rotate-6 inline-block transform shadow-lg font-display"
+                  className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-black text-black tracking-tighter leading-none bg-green-400 py-2 px-6 -rotate-6 inline-block transform shadow-lg font-display"
                   initial={{ y: 100, opacity: 0, rotate: 0 }}
                   animate={{ y: 0, opacity: 1, rotate: -6 }}
                   transition={{ duration: 0.8, delay: 0.4 }}
@@ -51,20 +51,20 @@ const Hero = () => {
             </motion.div>
 
             <motion.div
-              className="mt-8 max-w-2xl"
+              className="mt-6 md:mt-8 max-w-2xl"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              <p className="text-gray-300 text-lg md:text-xl font-medium font-sans">
+              <p className="text-gray-300 text-base md:text-lg lg:text-xl font-medium font-sans">
                 Bold ideas, smart code, and designs that make an impact.<br />
                 Transform your vision into <span className="text-green-400 font-bold font-sans">digital reality</span> today!
               </p>
 
-              <div className="mt-8">
+              <div className="mt-4 md:mt-8">
                 <button
                   onClick={openCalendlyPopup}
-                  className="inline-flex items-center justify-center px-8 py-3 border-2 border-white text-white hover:bg-green-400 hover:text-black hover:border-green-400 transition-all duration-300 uppercase font-black tracking-wider text-base font-display"
+                  className="inline-flex items-center justify-center px-6 py-2 md:px-8 md:py-3 border-2 border-white text-white hover:bg-green-400 hover:text-black hover:border-green-400 transition-all duration-300 uppercase font-black tracking-wider text-sm md:text-base font-display"
                 >
                   Book Free Consultation
                 </button>

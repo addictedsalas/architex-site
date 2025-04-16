@@ -4,13 +4,13 @@ import React from 'react';
 
 const Hero = () => {
   return (
-    <section className="relative h-[100svh] flex items-center pt-12 pb-4 md:pt-16 md:pb-8 overflow-hidden bg-cover bg-center" style={{ backgroundImage: "url('/images/black-gradient-image.jpg')" }}>
-      <div className="max-w-[1920px] w-full mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative h-[100svh] flex items-center justify-center pt-0 pb-0 md:pt-16 md:pb-8 overflow-hidden bg-cover bg-center" style={{ backgroundImage: "url('/images/black-gradient-image.jpg')" }}>
+      <div className="max-w-[1920px] w-full mx-auto px-4 sm:px-6 lg:px-8 -mt-16 md:mt-0">
         <div className="relative z-10">
           {/* Main headline */}
           <div className="flex flex-col items-start">
             <motion.div
-              className="flex flex-col"
+              className="flex flex-col -space-y-4 md:space-y-0"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8 }}

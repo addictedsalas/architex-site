@@ -258,7 +258,7 @@ const ProjectPage = () => {
   return (
     <>
       <Head>
-        <title>{project.title} | Boring Projects</title>
+        <title>{project.title} | Architex Creative</title>
         <meta name="description" content={project.description} />
       </Head>
 

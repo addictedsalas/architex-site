@@ -75,7 +75,7 @@ const Services = () => {
                 <div className="flex items-center">
                   <span className="text-4xl md:text-6xl font-black mr-4 md:mr-8">{service.id}.</span>
                 </div>
-                <h3 className="text-3xl md:text-5xl lg:text-6xl font-black text-black ml-auto font-display">
+                <h3 className="text-3xl md:text-5xl lg:text-6xl font-black text-black text-right ml-auto font-display">
                   {service.title}
                 </h3>
                 <div className="ml-6 md:ml-12">

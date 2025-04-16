@@ -20,8 +20,8 @@ const Home = () => {
   return (
     <>
       <Head>
-        <title>Boring Projects</title>
-        <meta name="description" content="Boring Projects - Design, Develop, Deploy" />
+        <title>Architex Creative</title>
+        <meta name="description" content="Architex Creative - Design, Develop, Deploy" />
         <link rel="icon" href="/favicon.ico" />
         {/* Add Calendly Assets */}
         <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />

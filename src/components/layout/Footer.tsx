@@ -51,7 +51,7 @@ const Footer = () => {
                 </div>
                 <div>
                   <h4 className="text-white font-bold mb-1">Email</h4>
-                  <a href="mailto:hello@boringprojects.com" className="text-gray-300 hover:text-green-500 transition-colors">architexcreative@gmail.com</a>
+                  <a href="mailto:architexcreative@gmail.com" className="text-gray-300 hover:text-green-500 transition-colors">architexcreative@gmail.com</a>
                 </div>
               </div>
               <div className="flex items-start space-x-4">

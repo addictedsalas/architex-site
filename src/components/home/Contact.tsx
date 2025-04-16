@@ -1,9 +1,10 @@
 import Link from 'next/link';
 import { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { FiMail, FiPhone, FiMapPin } from 'react-icons/fi';
+import { FiMail, FiPhone, FiMapPin, FiCalendar } from 'react-icons/fi';
 import emailjs from '@emailjs/browser';
 import Image from 'next/image';
+import { openCalendlyPopup } from '@/utils/calendly';
 
 const Contact = () => {
   const form = useRef<HTMLFormElement>(null);
@@ -87,7 +88,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="text-white font-bold mb-1">Email</h4>
-                  <a href="mailto:boringprojects@gmail.com" className="text-gray-300 hover:text-green-500 transition-colors">boringprojects@gmail.com</a>
+                  <a href="mailto:architexcreative@gmail.com" className="text-gray-300 hover:text-green-500 transition-colors">architexcreative@gmail.com</a>
                 </div>
               </div>
               
@@ -200,6 +201,17 @@ const Contact = () => {
                   {statusMessage}
                 </p>
               )}
+              
+              <div className="mt-6 text-center">
+                <p className="text-gray-300 mb-3">Prefer to schedule a call directly?</p>
+                <button
+                  onClick={openCalendlyPopup}
+                  className="inline-flex items-center justify-center px-6 py-3 border border-green-500 text-green-500 hover:bg-green-500 hover:text-black transition-all duration-300 rounded-lg font-medium"
+                >
+                  <FiCalendar className="mr-2" />
+                  Schedule a Consultation
+                </button>
+              </div>
             </form>
           </div>
         </div>

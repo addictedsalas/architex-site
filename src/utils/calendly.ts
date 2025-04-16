@@ -10,7 +10,7 @@ declare global {
 }
 
 // Calendly URL with customizations
-export const calendlyUrl = 'https://calendly.com/boringprojects/30min?background_color=272727&text_color=ffffff&primary_color=22c55e';
+export const calendlyUrl = 'https://calendly.com/architexcreative/30min?background_color=1a1a1a&text_color=ffffff&primary_color=35bf1c';
 
 // Function to open Calendly popup
 export const openCalendlyPopup = (e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => {

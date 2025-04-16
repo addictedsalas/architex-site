@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div className="md:col-span-1">
-            <h3 className="text-xl font-bold uppercase">ARCHITEX</h3>
+            <h3 className="text-xl font-bold uppercase">BORING PROJECTS</h3>
             <p className="text-light-400">
               No fluff, no jargon, just clean, elegant code and designs that pop.
             </p>
@@ -53,7 +53,7 @@ const Footer = () => {
                 </div>
                 <div>
                   <h4 className="text-white font-bold mb-1">Email</h4>
-                  <a href="mailto:hello@architex.com" className="text-gray-300 hover:text-green-500 transition-colors">hello@architex.com</a>
+                  <a href="mailto:hello@boringprojects.com" className="text-gray-300 hover:text-green-500 transition-colors">hello@boringprojects.com</a>
                 </div>
               </div>
               <div className="flex items-start space-x-4">
@@ -85,7 +85,7 @@ const Footer = () => {
 
         <div className="pt-8 border-t border-dark-600 flex flex-col md:flex-row justify-between items-center">
           <p className="text-light-400 mb-4 md:mb-0">
-            &copy; {new Date().getFullYear()} Architex Creative. All rights reserved.
+            &copy; {new Date().getFullYear()} Boring Projects. All rights reserved.
           </p>
           <div className="flex space-x-6">
             <Link href="/privacy" className="text-light-400 hover:text-accent transition-colors">

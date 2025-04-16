@@ -59,7 +59,7 @@ const projects: Record<string, ProjectData> = {
       'Mobile sales increased by 42% in the first month after launch'
     ],
     testimonial: {
-      quote: "Architex Creative understood our brand from day one. They delivered a website that perfectly captures our minimalist aesthetic while providing an exceptional shopping experience for our customers.",
+      quote: "Boring Projects understood our brand from day one. They delivered a website that perfectly captures our minimalist aesthetic while providing an exceptional shopping experience for our customers.",
       author: "Jane Smith",
       position: "Founder, Boring Tees Co."
     },
@@ -105,7 +105,7 @@ const projects: Record<string, ProjectData> = {
       'Social media referral traffic increased by 120%'
     ],
     testimonial: {
-      quote: "The team at Architex Creative transformed our online presence. Our customers constantly compliment our website, and we have seen a significant increase in sales since the launch.",
+      quote: "The team at Boring Projects transformed our online presence. Our customers constantly compliment our website, and we have seen a significant increase in sales since the launch.",
       author: "Maria Rodriguez",
       position: "Creative Director, Dabalina Jewelry"
     },
@@ -151,7 +151,7 @@ const projects: Record<string, ProjectData> = {
       '65% of customers complete their purchase after starting a design'
     ],
     testimonial: {
-      quote: "Architex Creative delivered exactly what we envisioned - a fun, easy-to-use platform that makes custom t-shirt design accessible to everyone. Our customers love the experience, and our business has grown exponentially since launch.",
+      quote: "Boring Projects delivered exactly what we envisioned - a fun, easy-to-use platform that makes custom t-shirt design accessible to everyone. Our customers love the experience, and our business has grown exponentially since launch.",
       author: "Marcus Johnson",
       position: "CEO, Tees The Moment"
     },
@@ -196,7 +196,7 @@ const projects: Record<string, ProjectData> = {
       'Used in 12 major investor presentations resulting in $40M in new funding'
     ],
     testimonial: {
-      quote: "The data visualization platform developed by Architex Creative has transformed how we communicate our quantum computing advances. Complex concepts that were previously difficult to explain are now immediately understandable through the interactive visualizations.",
+      quote: "The data visualization platform developed by Boring Projects has transformed how we communicate our quantum computing advances. Complex concepts that were previously difficult to explain are now immediately understandable through the interactive visualizations.",
       author: "Dr. Sarah Chen",
       position: "Chief Research Officer, IONQ Technologies"
     },
@@ -258,7 +258,7 @@ const ProjectPage = () => {
   return (
     <>
       <Head>
-        <title>{project.title} | Architex Creative</title>
+        <title>{project.title} | Boring Projects</title>
         <meta name="description" content={project.description} />
       </Head>
 

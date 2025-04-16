@@ -1,4 +1,4 @@
-# Architex Creative Website
+# Boring Projects Website
 
 A modern, responsive marketing website built with the T3 Stack (Next.js, TypeScript, and Tailwind CSS).
 
@@ -53,7 +53,7 @@ src/
 
 This project can be easily deployed to Vercel:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fyour-username%2Farchitex-site)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fyour-username%2Fboring-projects-site)
 
 ## License
 

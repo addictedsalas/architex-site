@@ -12,7 +12,7 @@ const Navbar = () => {
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
               {/* Replace with your logo */}
-              <span className="text-xl font-black text-white tracking-tight font-display">ARCHITEX CREATIVE AGENCY</span>
+              <span className="text-xl font-black text-white tracking-tight font-display">BORING PROJECTS</span>
             </Link>
           </div>
 

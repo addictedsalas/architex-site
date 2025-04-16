@@ -1,4 +1,4 @@
-import React from 'react';
+import type React from 'react';
 
 // Add type declaration for Calendly on the window object
 declare global {

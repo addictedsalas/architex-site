@@ -22,7 +22,7 @@ const CallToAction = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          Let's discuss how Architex Creative can bring your software or AI project to life. Schedule a free consultation to explore your ideas with our experts.
+          Let&apos;s discuss how Architex Creative can bring your software or AI project to life. Schedule a free consultation to explore your ideas with our experts.
         </motion.p>
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}

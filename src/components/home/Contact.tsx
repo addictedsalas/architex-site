@@ -29,9 +29,9 @@ const Contact = () => {
     setIsSending(true);
     setStatusMessage('Sending...');
 
-    const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || 'YOUR_SERVICE_ID';
-    const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || 'YOUR_TEMPLATE_ID';
-    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || 'YOUR_PUBLIC_KEY';
+    const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID ?? 'YOUR_SERVICE_ID';
+    const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID ?? 'YOUR_TEMPLATE_ID';
+    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY ?? 'YOUR_PUBLIC_KEY';
 
     emailjs.sendForm(serviceID, templateID, form.current, publicKey)
       .then(
@@ -44,7 +44,7 @@ const Contact = () => {
           setTimeout(() => setStatusMessage(''), 5000);
         },
         (error) => {
-          console.error('EmailJS Error:', error.text);
+          console.error('EmailJS Error:', error && typeof error === 'object' && 'text' in error ? error.text : error);
           setStatusMessage('Failed to send message. Please try again.');
           setIsSending(false);
           setTimeout(() => setStatusMessage(''), 5000);
